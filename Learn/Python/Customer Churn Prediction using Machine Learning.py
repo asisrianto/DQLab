@@ -21,7 +21,7 @@
 # In[1]:
 
 
-Library dan Data yang Digunakan
+#Library dan Data yang Digunakan
 
 
 # Library yang Digunakan
@@ -221,7 +221,7 @@ print(cleaned_df.head())
 from sklearn.preprocessing import LabelEncoder
 #Convert all the non-numeric columns to numerical data types
 for column in cleaned_df.columns:
-    if cleaned_df[column].dtype == np.number: continue
+    if cleaned_df[column].dtype == np.float64 or cleaned_df[column].dtype == np.int64: continue
     # Perform encoding for each non-numeric column
     cleaned_df[column] = LabelEncoder().fit_transform(cleaned_df[column])
 print(cleaned_df.describe())
